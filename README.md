@@ -1,6 +1,6 @@
 # preact-htm-deno
 
-Just a experiment on how to user preact with deno.
+Just a experiment on how one can use preact with deno.
 
 ## How ro run
 
