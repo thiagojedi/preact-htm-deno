@@ -15,7 +15,11 @@ const body = renderToString(html`
   </html>
 `);
 
-import { Application, Router, send } from "https://deno.land/x/oak/mod.ts";
+import {
+  Application,
+  Router,
+  send, //TODO: update this URL once https://github.com/oakserver/oak/pull/58 gets merged 
+} from "https://raw.githubusercontent.com/Soremwar/oak/v0.41/mod.ts";
 const app = new Application();
 
 const router = new Router();
