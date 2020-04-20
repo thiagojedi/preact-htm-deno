@@ -3,7 +3,7 @@ import { h } from 'https://unpkg.com/preact@10.0.5/dist/preact.module.js';
 const html = htm.bind(h);
 
 import { App } from './app.js';
-import { renderToString } from "https://unpkg.com/preact-render-to-string?module";
+import { renderToString } from 'https://cdn.pika.dev/preact-render-to-string';
 const body = renderToString(html`
   <html>
     <head>
