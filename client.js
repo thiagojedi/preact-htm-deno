@@ -4,4 +4,4 @@ const html = htm.bind(h);
 
 import { App } from "./app.js";
 
-hydrate(html`<${App} page="All" />`, document.body);
+hydrate(html`<${App} page="Client" />`, document.body);
