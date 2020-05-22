@@ -2,7 +2,7 @@
 
 Just a experiment on how one can use preact with deno.
 
-## How ro run
+## How to run
 
 ```
 deno run --allow-net --allow-read ./server.ts
