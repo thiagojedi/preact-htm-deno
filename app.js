@@ -1,10 +1,6 @@
-import htm from "https://unpkg.com/htm@2.2.1/dist/htm.module.js";
-import {
-  h as preact,
-  Component
-} from "https://unpkg.com/preact@10.0.5/dist/preact.module.js";
+import { htm, h, Component } from "./deps.js";
 
-const h = htm.bind(preact);
+const html = htm.bind(h);
 
 export class App extends Component {
   addTodo() {
@@ -12,15 +8,18 @@ export class App extends Component {
     this.setState({ todos: todos.concat(`Item ${todos.length}`) });
   }
   render({ page }, { todos = [] }) {
-    return h`
+    return html`
       <div class="app">
         <${Header} name="ToDo's (${page})" />
         <ul>
-          ${todos.map(
-            todo => h`
+          ${
+      todos.map(
+        (todo) =>
+          html`
               <li>${todo}</li>
-            `
-          )}
+            `,
+      )
+    }
         </ul>
         <button onClick=${() => this.addTodo()}>Add Todo</button>
         <${Footer}>footer content here<//>
@@ -29,11 +28,11 @@ export class App extends Component {
   }
 }
 const Header = ({ name }) =>
-  h`
+  html`
     <h1>${name} List</h1>
   `;
 
-const Footer = props =>
-  h`
+const Footer = (props) =>
+  html`
     <footer ...${props} />
   `;
