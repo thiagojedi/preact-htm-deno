@@ -16,7 +16,7 @@ const body = renderToString(html`
       <script src="/client.js" type="module"></script>
     </head>
     <body>
-      <${App} page="All" />
+      <${App} page="Server" />
     </body>
   </html>
 `);
